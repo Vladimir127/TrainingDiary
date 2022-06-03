@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.practice.trainingdiary.Activities.AttemptActivity$DayActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+        android:layout_below="@+id/appbar"
+        android:id="@+id/recycler_view_entries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:dividerHeight="0dp"/>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true"
+        app:menu_labels_textColor="@android:color/primary_text_light"
+        app:menu_labels_colorNormal="@android:color/background_light"
+        app:menu_labels_colorPressed="@android:color/background_light"
+        app:menu_colorNormal="@color/accent"
+        app:menu_colorPressed="@color/accent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Тренировка"
+            app:fab_size="mini"
+            android:id="@+id/floating_action_item_1"
+            android:src="@drawable/ic_dumbbell_white_24dp"
+            app:fab_colorNormal="@color/blue"
+            app:fab_colorPressed="@color/blue"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Измерение"
+            app:fab_size="mini"
+            android:id="@+id/floating_action_item_2"
+            android:src="@drawable/ic_ruler_white_24dp"
+            app:fab_colorNormal="@color/green"
+            app:fab_colorPressed="@color/green"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Заметка"
+            app:fab_size="mini"
+            android:id="@+id/floating_action_item_3"
+            android:src="@drawable/ic_edit_black_24dp"
+            app:fab_colorNormal="@color/orange"
+            app:fab_colorPressed="@color/orange"/>
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <RelativeLayout android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/empty_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:text="Список событий пуст" />
+    </RelativeLayout>
+
+</RelativeLayout>

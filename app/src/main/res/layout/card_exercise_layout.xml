@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/card_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--card_view:cardBackgroundColor="@android:color/background_light"-->
+        <!--card_view:cardElevation="1dp">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/button_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:alpha=".54"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_expand_less_black_24dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/text_view_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Заголовок"
+                    android:maxLines="1"
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary_text"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageButton
+                    android:id="@+id/button_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:alpha=".54"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_more_vert_black_24dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:id="@+id/table_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                    <TableRow
+                        android:id="@+id/row_title"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:text="Мера"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="sans-serif"
+                            android:textSize="12sp"
+                            android:textColor="@color/secondary_text"/>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.75dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/divider" />
+
+                    <TableRow
+                        android:id="@+id/row_weight"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Вес (кг)"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="sans-serif"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"
+                            android:gravity="center_vertical"/>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.75dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@color/divider" />
+
+                    <TableRow
+                        android:id="@+id/row_count"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Повторения (раз)"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="sans-serif"
+                            android:textSize="16sp"
+                            android:textColor="@color/primary_text"/>
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    <!--TODO: Сделать таблицу прокручиваемой по горизонтали-->
+    <!--</android.support.v7.widget.CardView>-->
+</android.support.constraint.ConstraintLayout>
